@@ -11,8 +11,8 @@ It should return the date for Indepencence Day.
 ( function() {
   "use strict";
 
-  //Your code here.
-
+  var date = new Date("Jul 04 1776 00:00:00 GMT-0400 (EDT)");
+  date.setDate(4);
   console.log( "Independence Day date: ", date );
   console.assert( date == "Thu Jul 04 1776 00:00:00 GMT-0400 (EDT)", "#1: Test failed. Check the parameters. Returned: " + date )
 } )();
@@ -27,8 +27,8 @@ It should return new year's day for 2018.
 ( function() {
   "use strict";
 
-  //Your code here.
-
+var date = new Date(5, 2, 1, 2018);
+var currentYear = date.getFullYear();
 console.log( "Happy new year!: ", date );
 console.assert( date == "Thu Feb 01 2018 00:00:00 GMT-0400 (EDT)", "#2: Test failed. Check the parameters. Returned: " + date )
 } )();
@@ -60,9 +60,8 @@ HINT: you will need to use 'getFullYear()' for one of the variables.
 ( function() {
   "use strict";
 
-//date variable here
-//year variable here
-
+  var date = new Date(2017);
+  var year = date.getFullYear();
   console.log( "Current year: ", year );
   console.assert( year == "2017", "#4: Test failed. Check the function. Are you 'getting' the full year?. Returned: " + date )
 } )();
@@ -80,7 +79,7 @@ It should round a the `num` variable to be 184. Use the appropiate math method.
   "use strict";
 
 //Your code here
-const num = 184.33;
+const roundNum = roundNum(184.33);
 
  console.log( "roundNum: ", roundNum );
  console.assert( roundNum == "184", "#5: Test failed. Check your math method and parameters. Return: " + roundNum )
